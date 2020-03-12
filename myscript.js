@@ -14,6 +14,11 @@ app.controller("StudentController",function($scope){
 		{Name:"Mis Yumna",Phone:"0320-9865321",Email:"wali@gmail.com",Password:"wali123"},
 		{Name:"Sir uzain",Phone:"0320-9865321",Email:"wali@gmail.com",Password:"wali123"},
 		{Name:"Sir ",Phone:"0320-9865321",Email:"wali@gmail.com",Password:"wali123"}
+		{Name:"Sir ",Phone:"0320-9865321",Email:"wali@gmail.com",Password:"wali123"}
+		{Name:"Sir ",Phone:"0320-9865321",Email:"wali@gmail.com",Password:"wali123"}
+		{Name:"Sir ",Phone:"0320-9865321",Email:"wali@gmail.com",Password:"wali123"}
+		{Name:"Sir ",Phone:"0320-9865321",Email:"wali@gmail.com",Password:"wali123"}
+		{Name:"Sir ",Phone:"0320-9865321",Email:"wali@gmail.com",Password:"wali123"}
 		
 	];
 	

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<script src="myscript.js"></script>
+</head>
+
+<body ng-app="StudentModule" ng-controller="StudentController">
+
+Name <input type="text" placeholder="Name" ng-model="Name"><br>
+Phone <input type="text" placeholder="Phone" ng-model="Phone"><br>
+Email <input type="text" placeholder="Email" ng-model="Email"><br>
+Password <input type="text" placeholder="Password" ng-model="Password"><br>
+
+<input type="button" ng-hide="IsEdit" value="Save" ng-click="insertStudent(Name,Phone,Email,Password)">
+
+<input type="button" ng-show="IsEdit" value="Update" ng-click="update(Name,Phone,Email,Password)"><br>
+<input type="checkbox" ng-model="IsShowPassword">
+<center>
+<input  type="text" ng-model="txt"></center>
+<table border="1" style="width: 90%; margin: 0 auto">
+<tr>
+<th>Id</th>
+	<th>Name</th>
+	<th>Phone</th>
+	<th>Email</th>
+	<th>Password</th>
+	<th>Actions</th>
+	
+	
+</tr>
+	
+	<tr ng-repeat="Student in Students | filter:txt">
+		<td>{{$index+1}}</td>
+		<td>{{Student.Name}}</td>
+		
+		<td>{{Student.Phone}}</td>
+		<td>{{Student.Email}}</td>
+		<td ng-show="IsShowPassword">{{Student.Password}}</td>
+		<td ng-hide="IsShowPassword">*******</td>
+		
+		<td>
+			<img src="delete.png" alt="" ng-click="Delete($index)" width="25"> 
+			<img src="edit.jpg" alt=""  ng-click="Edit($index)" width="25">
+			
+		</td>
+	</tr>
+	
+	
+</table>
+
+
+</body>
+</html>
